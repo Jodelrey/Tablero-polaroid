@@ -1,8 +1,10 @@
 body {
     margin: 0;
+    height: 100%;
 }
 
 .tablero{
+    height: 100%;
     width: 100%;
     background-image: url(polaroid/fondo.jpg);
     background-repeat: repeat;  
@@ -12,6 +14,7 @@ body {
 
 }
 .galeria{
+    height: 100%;
     width: 80%;    
     display: flex;
     justify-content: center;
@@ -20,8 +23,8 @@ body {
 }
 
 .photos {
-    width: 270px;
-    height: 370px;
+    width: 200px;
+    height: 270px;
     background-color: beige;
     border-radius: 4px;
     display: flex;
@@ -30,10 +33,10 @@ body {
     align-items: center;
     flex-wrap: wrap ;
     font-family: 'Nothing You Could Do', cursive;
-    font-size: 20px;
+    font-size: 16px;
     box-shadow: 10px 10px 10px -5px grey;
     position: relative;
-    transform: 0.3s;
+    transition: 0.3s;
     
 }
 
@@ -48,47 +51,51 @@ figcaption{
 }
 
 .foto1{
-    top: 10px;
+    top: 0px;
     left: 20px;
     z-index: 10;
     -webkit-transform: rotate(-10deg);
 }
 .foto2{
-    top: 10px;
+    top: 0px;
     left: -20px;
-    z-index: 20;
+    z-index: 20; 
+    filter: contrast(150%) saturate(110%);
     -webkit-transform: rotate(20deg);
 }
 
 .foto3{
-    top: 20px;
+    top: 5px;
     left: -10px;
-    z-index: 30;
+    z-index: 30;    
     -webkit-transform: rotate(-15deg);
 }
 
 .foto4{
-    top: 10px;
+    top: 5px;
     left: -10px;
     z-index: 40;
+    filter: brightness(110%) contrast(85%) saturate(75%) sepia(22%);
     -webkit-transform: rotate(15deg);
 }
 
 .foto5{
-    top: 5px;
+    top: 3px;
     left: -10px;
     z-index: 50;
     -webkit-transform: rotate(-15deg);
 }
 
 .foto6{
-    top: 5px;
+    top: 3px;
     left: -10px;
     z-index: 60;
+    filter: brightness(110%) contrast(110%) grayscale(100%) sepia(30%);
     -webkit-transform: rotate(20deg);
+    
 }
 
 .photos:hover{
-    transform: scale(1.3);
+    transform: scale(1.2);
     z-index: 100;
 }
